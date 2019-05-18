@@ -6,7 +6,8 @@ class Footer extends Component {
   constructor() {
     super();
     this.state = {
-      hide: false
+      hide: false,
+      valid: false
     };
   }
 
@@ -14,7 +15,7 @@ class Footer extends Component {
     e.preventDefault();
     this.setState({
       hide: true
-    });
+    })
     alert('did the thing');
   }
 

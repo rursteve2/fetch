@@ -20,8 +20,8 @@ constructor() {
     this.setState({ search: value });
   }
  
- 
-  
+
+
 
 
 
@@ -30,14 +30,14 @@ constructor() {
     <div className="App">
       <NavBar/>
       <Switch>
-        <Route exact path="/" render={() => 
+        <Route exact path="/" render={() =>
         <div>
           <Search search={this.state.search} onChangeHandler={this.onChangeHandler} />
           <Body/>
         </div>
       }/>
       <Route path="/articles" render={() => <Articles/>}/>
-        <Search 
+        <Search
         search={this.state.search}
         onChangeHandler={this.onChangeHandler}
         />
