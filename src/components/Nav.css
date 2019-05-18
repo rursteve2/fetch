@@ -1,0 +1,34 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  width: 100vw;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: lightblue;
+}
+
+.placeholder {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid black;
+  color: black;
+}
