@@ -52,7 +52,9 @@ dataSplit = async() => {
   return (
     <div className="App">
       <NavBar/>
-        <Search/>
+        <Search
+        articles = {this.state.articles}
+        />
         <Body
         articles={this.state.articles}
         />
