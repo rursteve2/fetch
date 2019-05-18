@@ -4,11 +4,12 @@ header {
   width: 100vw;
   justify-content: center;
   align-items: flex-end;
-  background-color: lightblue;
+  background-color: white;
+  border-bottom: 2px solid #dadada;
 }
 
 .placeholder {
-  background-color: blue;
+  background-color: orange;
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -17,18 +18,22 @@ header {
 nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
-  margin-bottom: 15px;
+  align-items: center;
 }
 
 .nav-link {
+  display: block;
+  width: auto;
   font-weight: bold;
   text-decoration: none;
-  color: blue;
+  padding: 20px;
+  color: orange;
   border-bottom: 2px solid transparent;
+  transition: 0.4s;
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid black;
-  color: black;
+  border-bottom: 2px solid white;
+  color: white;
+  background-color: orange;
 }

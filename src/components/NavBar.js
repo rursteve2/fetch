@@ -10,8 +10,8 @@ export default function NavBar() {
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/articles" className="nav-link">Articles</Link>
         <Link to="/" className="nav-link">Gallery</Link>
-        <Link to="/" className="nav-link">About</Link>
         <Link to="/" className="nav-link">Forum</Link>
+        <Link to="/" className="nav-link">About</Link>
       </nav>
     </header>
   );
