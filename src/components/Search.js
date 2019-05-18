@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import articles from '../articles'
-import { Redirect } from 'react-router-dom'
+
+
+function searchingFor(term) {
+  return function(x) {
+  return x.title.toLowerCase().includes(term.toLowerCase()) || false;
+  };
+}
+
 
 class Search extends Component {
-constructor() {
-    super()
-    this.state = {
-        submitted: false
+
+    constructor() {
+        super()
+        this.state = {
+            filteredArticles: [],
+            submitted:false
+        }
     }
-}
 
     onSubmit = (e) => {
         e.preventDefault()
@@ -17,7 +26,8 @@ constructor() {
         )
         console.log(allArticles)
         this.setState({
-            submitted: true
+            filteredArticles: allArticles,
+            submitted:true
         })
         return allArticles
       }
@@ -25,17 +35,26 @@ constructor() {
 
 
   render() {
-      let afterSubmit = this.state.submitted ? <Redirect to="/articles" /> : null
+      let map = this.state.submitted ?
+      this.state.filteredArticles.map((article) => {
+          return(
+              <div>
+              <h1>{article.title}</h1>
+              <p>{article.body}</p>
+              </div>
+          )
+      }) : null
   return (
     <div>
-        {afterSubmit}
         <form onSubmit={e => this.onSubmit(e)}>
             <input onChange={this.props.onChangeHandler} type="search" value={this.props.search} placeholder="Search for article"/>
             <button type="submit">Search</button>
         </form>
+        {map}
     </div>
   );
 }
 }
+
 
 export default Search;
