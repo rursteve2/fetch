@@ -20,10 +20,6 @@ constructor() {
     this.setState({ search: value });
   }
  
- 
-  
-
-
 
   render() {
   return (
