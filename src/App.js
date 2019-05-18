@@ -4,16 +4,46 @@ import NavBar from './components/NavBar'
 import Search from './components/Search'
 import Body from './components/Body'
 import Footer from './components/Footer'
+import Articles from './components/Articles'
+import { Route, Switch } from 'react-router-dom'
 
 class App extends Component {
-  render() {
+constructor() {
+  super()
+  this.state = {
+    search: ""
+  }
+}
 
+  onChangeHandler = (e) => {
+    let { value } = e.target;
+    this.setState({ search: value });
+  }
+ 
+ 
+  
+
+
+
+  render() {
   return (
     <div className="App">
       <NavBar/>
-        <Search/>
+      <Switch>
+        <Route to="/" render={() => 
+        <div>
+          <Search search={this.state.search} onChangeHandler={this.onChangeHandler} />
+          <Body/>
+        </div>
+      }/>
+      <Route to="/articles" render={() => <Articles/>}/>
+        <Search 
+        search={this.state.search}
+        onChangeHandler={this.onChangeHandler}
+        />
         <Body/>
-        <Footer/>
+      </Switch>
+      <Footer/>
     </div>
   );
 }
