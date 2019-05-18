@@ -4,15 +4,36 @@ import NavBar from './components/NavBar'
 import Search from './components/Search'
 import Body from './components/Body'
 import Footer from './components/Footer'
+import data from './data.js'
 
 class App extends Component {
-  render() {
+  constructor(){
+    super()
+    this.state ={
+      articles: []
+    }
+  }
 
+  dataGrabber = async() => {
+    const newData = data.map((articles) => { 
+      return articles
+    })  
+    await this.setState({ articles: newData })
+      console.log(this.state)   
+  }
+
+  componentDidMount(){
+    this.dataGrabber();
+  }
+
+  render() {
   return (
     <div className="App">
       <NavBar/>
         <Search/>
-        <Body/>
+        <Body
+        articles={this.state.articles}
+        />
         <Footer/>
     </div>
   );
