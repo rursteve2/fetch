@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function NavBar() {
   return (
     <header>
-      <div className="placeholder"></div>
+      <div className="placeholder">i'm a cute dog or something</div>
       <nav>
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/articles" className="nav-link">Articles</Link>
