@@ -71,11 +71,6 @@ constructor() {
         </div>
       }/>
       <Route path="/articles" render={() => <Articles/>}/>
-        <Search 
-        search={this.state.search}
-        onChangeHandler={this.onChangeHandler}
-        />
-        <Body/>
       </Switch>
       <Footer/>
     </div>
