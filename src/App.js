@@ -30,13 +30,13 @@ constructor() {
     <div className="App">
       <NavBar/>
       <Switch>
-        <Route to="/" render={() => 
+        <Route exact path="/" render={() => 
         <div>
           <Search search={this.state.search} onChangeHandler={this.onChangeHandler} />
           <Body/>
         </div>
       }/>
-      <Route to="/articles" render={() => <Articles/>}/>
+      <Route path="/articles" render={() => <Articles/>}/>
         <Search 
         search={this.state.search}
         onChangeHandler={this.onChangeHandler}
