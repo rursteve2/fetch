@@ -11,25 +11,37 @@ class App extends Component {
     super()
     this.state ={
       articles: [],
-      dogs: {}
+      dogs: [],
+      cats: [],
+      bunnies: []
     }
   }
 
-  dataGrabber = async() => {
-    const newData = data.map((articles) => { 
-      return articles
-    })  
-    await this.setState({ articles: newData })
-      console.log(this.state)   
-  }
+dataGrabber = async() => {
+  const newData = data.map((articles) => { 
+    return articles
+  })  
+  await this.setState({ articles: newData })
+    console.log(this.state)   
+}
 
-  dataSplit = async() => {
-    const dogType = data.filter((animal) => {
-      return animal.pet === 'dog';
+dataSplit = async() => {
+  const dogType = data.filter((animal) => {
+    return animal.pet === 'dog';
   })
-      this.setState({ dogs: dogType })
+  const catType = data.filter((animal) => {
+    return animal.pet === 'cat';
+  })
+  const bunnyType = data.filter((animal) => {
+    return animal.pet === 'bunny';
+  })
+  this.setState({ 
+    dogs: dogType,
+    cats: catType,
+    bunnies: bunnyType     
+  })
       console.log(this.state)
-  }
+}
 
   componentDidMount(){
     this.dataGrabber();
