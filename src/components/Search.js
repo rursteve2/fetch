@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import articles from '../articles'
 
 
+function searchingFor(term) {
+  return function(x) {
+  return x.title.toLowerCase().includes(term.toLowerCase()) || false;
+  };
+}
+
+
 class Search extends Component {
+
     constructor() {
         super()
         this.state = {
@@ -47,5 +55,6 @@ class Search extends Component {
   );
 }
 }
+
 
 export default Search;
