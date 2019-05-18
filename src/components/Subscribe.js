@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Subscribe extends Component {
-  render() {
-
+export default function Subscribe(props) {
   return (
-    <div>
-      
-    </div>
-  );
-}
-}
-
-export default Subscribe;
+    <form className="subscribe" onSubmit={props.submitSubscribe}>
+      <p>Sign up for our newsletter!</p>
+      <input type="text" id="subscribe" name="subscribe" placeholder="email@address.com"/>
+      <input type="submit" value="Subscribe" className="subscribe-btn" />
+    </form>
+  )
+};
