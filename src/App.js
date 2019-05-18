@@ -10,7 +10,8 @@ class App extends Component {
   constructor(){
     super()
     this.state ={
-      articles: []
+      articles: [],
+      dogs: {}
     }
   }
 
@@ -22,8 +23,17 @@ class App extends Component {
       console.log(this.state)   
   }
 
+  dataSplit = async() => {
+    const dogType = data.filter((animal) => {
+      return animal.pet === 'dog';
+  })
+      this.setState({ dogs: dogType })
+      console.log(this.state)
+  }
+
   componentDidMount(){
     this.dataGrabber();
+    this.dataSplit()
   }
 
   render() {
