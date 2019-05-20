@@ -21,8 +21,8 @@ class Search extends Component {
 
     onSubmit = (e) => {
         e.preventDefault()
-        let allArticles = articles.filter((article) => 
-          article.pet === this.props.search
+        let allArticles = articles.filter((article) =>
+          article.pet === this.props.search || article.pet+'s' === this.props.search
         )
         console.log(allArticles)
         this.setState({
