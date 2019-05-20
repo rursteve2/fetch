@@ -35,3 +35,20 @@
     transform: rotate(360deg);
   }
 }
+
+.articles {
+  border: 3px #FFAA2B solid;
+  margin: 10px 0 10px 0;
+  /* display: flex;
+  flex-direction: column; */
+
+}
+.articles p {
+  font-family: 'helvetica';
+  font-size: 15px
+}
+.articles h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
