@@ -4,6 +4,9 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
+  background-image: url("./Desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {
@@ -39,13 +42,12 @@
 .articles {
   border: 3px #FFAA2B solid;
   margin: 10px 0 10px 0;
-  /* display: flex;
-  flex-direction: column; */
+  background-color: white;
 
 }
 .articles p {
   font-family: 'helvetica';
-  font-size: 15px
+  font-size: 15px;
 }
 .articles h1 {
   font-family: 'Montserrat', sans-serif;
