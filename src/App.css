@@ -41,8 +41,9 @@
 
 .articles {
   border: 3px #FFAA2B solid;
-  margin: 10px 0 10px 0;
+  margin: 10px auto 10px auto;
   background-color: white;
+  max-width: 80%;
 
 }
 .articles p {
