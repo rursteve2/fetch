@@ -64,12 +64,12 @@ footer p {
   background-color: deeppink;
 }
 
-.footer-bottom {
-  background-color: orange;
-}
+/* .footer-bottom {
+  background-color: #FFAA2B;
+} */
 
 .footer-bottom p {
-  color: white;
+  color: black;
   padding: 5px;
   margin: 0;
 }

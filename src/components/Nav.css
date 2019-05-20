@@ -27,14 +27,13 @@ nav {
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
-  color: white;
+  color: #3C0061;
   border-bottom: 2px solid transparent;
   transition: 0.4s;
-  text-shadow: 2px 2px #FFAA2B;
 
 }
 
 .nav-link:hover {
   color: white;
-  background-color: #FFAA2B;
+  text-shadow: 2px 2px #FFAA2B;
 }
