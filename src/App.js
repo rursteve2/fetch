@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar'
 import Search from './components/Search'
 import Body from './components/Body'
+import Forum from './components/Forum'
 import Footer from './components/Footer'
 
 
@@ -68,6 +69,7 @@ constructor() {
         </div>
       }/>
       <Route path="/articles" render={() => <Articles/>}/>
+      <Route path="/forums" render={() => <Forum/>}/>
       </Switch>
       <Footer/>
     </div>

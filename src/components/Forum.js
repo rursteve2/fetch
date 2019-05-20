@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import forums from '../forums'
+import SingleForum from './SingleForum'
 
 class Forum extends Component {
     constructor(props){
@@ -21,6 +22,7 @@ class Forum extends Component {
         return (
             <div>
                 <button onClick={this.dataRender}>data tester (check yo console)</button>
+                { forums.map((forum, index) => <SingleForum forum={forum} />) }                
             </div>
         );
     }
