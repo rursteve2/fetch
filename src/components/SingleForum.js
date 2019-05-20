@@ -10,6 +10,7 @@ class SingleForum extends Component {
     <div className="forums">
       <h1>{forum.title}</h1>
       <p>{forum.body}</p>
+      <span>{forum.brief}</span>
     </div>
   );
 }
