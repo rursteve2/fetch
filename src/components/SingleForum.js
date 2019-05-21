@@ -25,7 +25,7 @@ class SingleForum extends Component {
 
 handleSubmit = async(e) => {
   e.preventDefault();
-  alert('this is where we would have posted a comment lol backend anybody?')
+  alert('comment posted would have been..  ' + this.state.comment)
   window.location.reload('/');
 }
 
