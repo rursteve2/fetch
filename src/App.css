@@ -69,3 +69,16 @@
   margin-right: 28px;
   text-align: left;
 }
+.bodyanimals {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.searchbar {
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: 'helvetica';
+}
