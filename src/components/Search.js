@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import articles from '../articles'
 
-class Search extends Component { 
+class Search extends Component {
     constructor() {
         super()
         this.state = {
@@ -37,12 +37,12 @@ class Search extends Component {
       }) : null
   return (
     <div>
-        <form onChange={e => this.onSubmit(e)}>
-            <h1>Fetch the information you need to provide the best care for yor pet!</h1>
-            <input onChange={this.props.onChangeHandler} type="search" value={this.props.search} placeholder="Search for article"/>
-            <button type="submit">Search</button>
-        </form>
-        {map}
+      <form onChange={e => this.onSubmit(e)}>
+        <h1>Fetch the information you need to provide the best care for yor pet!</h1>
+        <input onChange={this.props.onChangeHandler} type="search" value={this.props.search} placeholder="Search for article"/>
+        <button type="submit">Search</button>
+      </form>
+      {map}
     </div>
   );
 }

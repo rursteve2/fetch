@@ -4,7 +4,7 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  background-image: url("./Desktop.jpg");
+  background-image: url("./assets/Desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
