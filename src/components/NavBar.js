@@ -1,18 +1,16 @@
 import React from 'react';
 import './Nav.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   return (
     <header id="top">
-      <div className="placeholder">i'm a cute dog or something</div>
-      {/*the actual logo should probs be a link back to the home page cuz people like that*/}
+      <NavLink to="/" exact activeClassName="none"><img src={require('../assets/fetch.png')} alt="Fetch" /></NavLink>
       <nav>
-        <Link to="/" className="nav-link">Home</Link>
-        <Link to="/articles" className="nav-link">Articles</Link>
-        <Link to="/" className="nav-link">Gallery</Link>
-        <Link to="/forums" className="nav-link">Forum</Link>
-        <Link to="/" className="nav-link">About</Link>
+        <NavLink to="/" exact className="nav-link" activeClassName="active">Home</NavLink>
+        <NavLink to="/articles" exact className="nav-link" activeClassName="active">Articles</NavLink>
+        <NavLink to="/forums" exact className="nav-link" activeClassName="active">Forum</NavLink>
+        <NavLink to="/about" exact className="nav-link" activeClassName="active">About Us</NavLink>
       </nav>
     </header>
   );

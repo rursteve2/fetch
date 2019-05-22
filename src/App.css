@@ -4,7 +4,7 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
-  background-image: url("./Desktop.jpg");
+  background-image: url("./assets/Desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -44,7 +44,9 @@
   margin: 10px auto 10px auto;
   background-color: white;
   max-width: 80%;
-
+  display: flex;
+  height: 230px;
+  width: 1186px;
 }
 .articles p {
   font-family: 'helvetica';
@@ -54,4 +56,50 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: bold;
+}
+.articles img {
+  max-width: 389px;
+  height: 175px;
+  margin-left: 30px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  margin-right: 28px;
+}
+.articles div {
+  margin-right: 28px;
+  text-align: left;
+}
+.bodyanimals {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.searchbar {
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: 'helvetica';
+  margin-right: 10px;
+}
+.searchbutton {
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'helvetica';
+}
+
+@media only screen and (max-width: 500px) {
+  .bodyanimals {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+
+
+
 }

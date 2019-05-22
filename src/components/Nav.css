@@ -2,22 +2,17 @@ header {
   display: grid;
   grid-template-columns: 1fr 6fr;
   width: 100vw;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
-  /* background-color: white; */
-  /* border-bottom: 2px solid #dadada; */
 }
 
-.placeholder {
-  background-color: #FFAA2B;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+header img {
+  height: 90px;
 }
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -26,14 +21,18 @@ nav {
   width: auto;
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
+  margin: 20px;
+  padding: 5px;
   color: #3C0061;
-  border-bottom: 2px solid transparent;
   transition: 0.4s;
+  border-bottom: 2px solid transparent;
+}
 
+.active {
+  border-bottom: 2px solid #3C0061;
 }
 
 .nav-link:hover {
   color: white;
-  text-shadow: 2px 2px #FFAA2B;
+  /* text-shadow: 2px 2px #FFAA2B; */
 }
