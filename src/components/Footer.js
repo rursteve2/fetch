@@ -23,14 +23,8 @@ class Footer extends Component {
     return (
       <footer>
         {this.state.hide ? null : <Subscribe submitSubscribe={this.submitSubscribe}/>}
-        <div className="social-container">
-          <div className="social fb"></div>
-          <div className="social tw"></div>
-          <div className="social pn"></div>
-          <div className="social ig"></div>
-        </div>
         <div className="footer-bottom">
-          <p>&#169; 2019 Fetch</p>
+          <p>Fetch &#169; 2019</p>
         </div>
       </footer>
     );

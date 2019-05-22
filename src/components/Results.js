@@ -14,8 +14,11 @@ class Results extends Component {
     let articles = this.props.articles.map((article, index) => {
       return (
         <div className="articles" key={index}>
-          <h1>{article.title}</h1>
-          <p>{article.brief}</p>
+          <img src={article.img} alt={article.title} />
+          <div>
+            <h2>{article.title}</h2>
+            <p>{article.brief}</p>
+          </div>
         </div>
       )
     })
