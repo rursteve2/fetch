@@ -51,17 +51,17 @@ dataSplit = async() => {
     let { value } = e.target;
     this.setState({ search: value });
   }
-  
+
   render() {
   return (
     <div className="App">
       <NavBar/>
+      <Switch>
       <Categories
       dogs={this.state.dogs}
       cats={this.state.cats}
       bunnies={this.state.bunnies}
       />
-      <Switch>
         <Route exact path="/" render={() =>
         <div>
           <Search search={this.state.search} onChangeHandler={this.onChangeHandler} />
