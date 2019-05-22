@@ -35,12 +35,11 @@ dataSplit = async() => {
    const bunnyType = this.state.articles.filter((animal) => {
      return animal.pet === 'bunny';
    })
-   await this.setState({ 
+   await this.setState({
      dogs: dogType,
      cats: catType,
-     bunnies: bunnyType     
+     bunnies: bunnyType
    })
-     console.log(this.state)
 }
 
  componentDidMount(){
@@ -57,7 +56,6 @@ dataSplit = async() => {
     let allArticles = articles.filter((article) =>
       article.pet.includes(this.state.search) || article.pet+'s' === this.state.search
     )
-    console.log(allArticles)
     this.setState({
       filteredArticles: allArticles,
       submitted: true
@@ -70,7 +68,7 @@ dataSplit = async() => {
       submitted: false
     })
   }
-  
+
   render() {
   return (
     <div className="App">
