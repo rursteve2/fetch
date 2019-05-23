@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import SingleDog from './SingleDog';
+import SingleCat from './SingleCat';
 
 class Dog extends Component {
   render() {
 
   return (
     <div>
-      <h1>Dogs!</h1>
-      { this.props.dogs.map((dog, index) => <SingleDog dog={dog} />) }
+      <h1>Cats!</h1>
+      { this.props.cats.map((cat, index) => <SingleCat cat={cat} />) }
     </div>
   );
 }

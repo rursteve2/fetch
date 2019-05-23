@@ -6,7 +6,7 @@ class Articles extends Component {
   render() {
 
   return (
-    <div>
+    <div className="allarticles">
       <h1>Articles!</h1>
       { articles.map((article, index) => {
         return (

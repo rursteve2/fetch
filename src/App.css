@@ -69,10 +69,94 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.forums {
+  border: 3px #FFAA2B solid;
+  margin: 10px auto 10px auto;
+  background-color: rgba(255, 255, 255, 0.479);
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 230px;
+  width: 1186px;
+}
+.forums p {
+  font-family: 'helvetica';
+  font-size: 15px;
+}
+.forums h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.forums img {
+  max-width: 389px;
+  height: 175px;
+  margin-left: 30px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  margin-right: 28px;
+}
+.forums div {
+  margin-right: 28px;
+  text-align: center;
+  justify-content: space-between;
+}
+.forums button {
+  max-width: 200px;
+}
+.forum-brief {
+  margin-top: auto;
+}
 .searchbar {
   width: 60%;
   height: 40px;
   border-radius: 5px;
   font-size: 25px;
   font-family: 'helvetica';
+  margin-right: 10px;
+}
+.searchbutton {
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'helvetica';
+}
+
+@media only screen and (max-width: 500px) {
+  .bodyanimals {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+  .allarticles {
+    overflow: scroll;
+  }
+  .articles {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+  }
+  .articles img{
+    max-width: 100%;
+    height: auto;
+    margin: 3px 3px 0 3px;
+  }
+  .articles div {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .articles h1 {
+    font-size: 17px;
+  }
+  .articles p {
+    font-size: 14px;
+  }
+
+
+
+
 }
