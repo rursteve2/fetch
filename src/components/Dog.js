@@ -6,7 +6,7 @@ class Dog extends Component {
   return (
     <div>
       <h1>Dogs!</h1>
-      { this.props.dogs.map((dog, index) => <ArticlePreview article={dog} />) }
+      { this.props.dogs.map((dog, index) => <ArticlePreview article={dog} key={index}/>) }
     </div>
   );
 }

@@ -22,13 +22,14 @@ class Results extends Component {
 
   noResults() {
     return (
-      <h3>Oops, we weren't able to fetch information for that!</h3>
+      <h3>Oops, we weren't able to find any resources for that!</h3>
     )
   }
 
   render() {
     return (
       <div>
+        {this.props.articles.length? <h4 className="results">Search Results: {this.props.search}</h4> : null }
         {this.props.articles.length ? this.showArticles() : this.noResults()}
       </div>
     )

@@ -7,7 +7,7 @@ class Cat extends Component {
   return (
     <div>
       <h1>Cats!</h1>
-      { this.props.cats.map((cat, index) => <ArticlePreview article={cat} />) }
+      { this.props.cats.map((cat, index) => <ArticlePreview article={cat} key={index} />) }
     </div>
   );
 }

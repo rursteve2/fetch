@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Forum from './SingleForum'
-import forums from '../forums'
+// import Forum from './SingleForum'
+// import forums from '../forums'
 
 
 class SingleForum extends Component {

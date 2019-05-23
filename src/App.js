@@ -16,8 +16,8 @@ import Bunny from './components/Bunny'
 import Cat from './components/Cat'
 
 class App extends Component {
-constructor() {
-  super()
+constructor(props) {
+  super(props)
   this.state = {
     search: "",
     filteredArticles: [],
@@ -84,12 +84,13 @@ dataSplit = async() => {
   return (
     <div className="App">
       <NavBar/>
+      {this.props.location.pathname !== '/about' &&
       <Search
             search={this.state.search}
             submitted={this.state.submitted}
             onSubmit={this.onSubmit}
             onChangeHandler={this.onChangeHandler} filteredArticles={this.state.filteredArticles}
-          />
+          />}
       <Switch>
         <Route exact path="/" render={() =>
           <Body
@@ -100,7 +101,7 @@ dataSplit = async() => {
         <Route path="/search-results" render={() => <div>
           <Results
           articles={this.state.filteredArticles}
-          resetSubmit={this.resetSubmit} selectArticle={this.selectArticle} />
+          resetSubmit={this.resetSubmit} selectArticle={this.selectArticle} search={this.state.search} />
           </div> }/>
           <Route path="/dog" render={() => <Dog
           dogs={this.state.dogs}

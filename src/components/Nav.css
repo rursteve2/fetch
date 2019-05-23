@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 header {
   display: grid;
   grid-template-columns: 1fr 6fr;
@@ -17,8 +19,8 @@ nav {
 }
 
 .nav-link {
-  font-family: 'Montserrat';
-  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   display: block;
   width: auto;
   font-size: 18px;
@@ -41,20 +43,24 @@ nav {
 }
 
 @media only screen and (max-width: 600px) {
+
   nav {
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
   }
+
   header {
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
   }
-  nav {
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
+
+  .nav-link {
+    margin: 2px;
   }
 
 }

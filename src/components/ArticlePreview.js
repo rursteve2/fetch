@@ -8,7 +8,7 @@ class ArticlePreview extends Component {
       <div className="articles">
         <img src={article.img} alt={article.title}/>
         <div>
-        <Link to={`article/${article.id}`} onClick={() => this.props.selectArticle(article.id)} className="link"><h1>{article.title}</h1></Link>
+        <Link to={`article/${article.id}`} onClick={() => this.props.selectArticle(article.id)} className="h1-link"><h1>{article.title}</h1></Link>
         <p>{article.brief}... <Link to={`article/${article.id}`} onClick={() => this.props.selectArticle(article.id)} className="link">Read more</Link></p>
         </div>
       </div>

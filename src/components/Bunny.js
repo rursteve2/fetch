@@ -6,7 +6,7 @@ class Bunny extends Component {
   return (
     <div>
       <h1>Bunnies!</h1>
-      { this.props.bunnies.map((bunny, index) => <ArticlePreview article={bunny} />) }
+      { this.props.bunnies.map((bunny, index) => <ArticlePreview article={bunny} key={index} />) }
     </div>
   );
 }
