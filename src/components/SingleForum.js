@@ -25,7 +25,7 @@ class SingleForum extends Component {
 
 handleSubmit = async(e) => {
   e.preventDefault();
-  alert('comment posted would have been..  ' + this.state.comment)
+  alert('comment(text) posted would have been.  ' + this.state.comment)
   window.location.reload('/');
 }
 
@@ -43,8 +43,9 @@ handleSubmit = async(e) => {
     <div className="forums">
       <h1>{forum.title}</h1>
       <p>{forum.body}</p>
-      <span>{forum.brief}</span>
-      <button onClick={this.handleClick}>Comment</button>
+      <div className='forum-brief'>{forum.brief}</div>
+     {/* <icon>{this.state.count}</icon>  this would have been num of comments but the state is currently flawed as it does not keep count per post instance*/}
+      <div><button onClick={this.handleClick}>Comment</button></div>
     </div>
   );
   else

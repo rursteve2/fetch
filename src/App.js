@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import Search from './components/Search'
+import SingleDog from './components/SingleDog'
+import SingleCat from './components/SingleCat'
+import SingleBunny from './components/SingleBunny'
 import Body from './components/Body'
 import Footer from './components/Footer'
 import Results from './components/Results'
@@ -11,6 +14,9 @@ import Articles from './components/Articles'
 import { Route, Switch } from 'react-router-dom';
 import About from './components/About';
 import Forum from './components/Forum';
+import Dog from './components//Dog'
+import Bunny from './components//Bunny'
+import Cat from './components/Cat'
 
 class App extends Component {
 constructor() {
@@ -75,22 +81,17 @@ dataSplit = async() => {
   return (
     <div className="App">
       <NavBar/>
-      <Categories
-      dogs={this.state.dogs}
-      cats={this.state.cats}
-      bunnies={this.state.bunnies}
-      />
-      <Switch>
-        <Route exact path="/" render={() =>
-        <div>
-          <Search
+      <Search
             search={this.state.search}
             submitted={this.state.submitted}
             onSubmit={this.onSubmit}
             onChangeHandler={this.onChangeHandler} filteredArticles={this.state.filteredArticles}
           />
-          <Body/>
-        </div>
+      <Switch>
+        <Route exact path="/" render={() =>
+          <Body
+          dogs={this.props.dogs}
+          />
       }/>
         <Route path="/articles" render={() => <Articles/>}/>
         <Route path="/search-results" render={() => <div>
@@ -104,6 +105,15 @@ dataSplit = async() => {
           articles={this.state.filteredArticles}
           resetSubmit={this.resetSubmit} />
           </div> }/>
+          <Route path="/Dog" render={() => <Dog
+          dogs={this.state.dogs}
+          />} />
+          <Route path="/Cat" render={() => <Cat
+          cats={this.state.cats}
+          />} />
+          <Route path="/Bunny" render={() => <Bunny
+          bunnies={this.state.bunnies}
+          />} />
         <Route path="/about" render={() => <About/>} />
         <Route path="/forum" render={() => <Forum/>} />
       </Switch>
