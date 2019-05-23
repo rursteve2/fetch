@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 .App {
   text-align: center;
   display: flex;
@@ -13,9 +15,20 @@
   background-color: rgba(60, 0, 97, 0.08)
 }
 
+.about h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  color: white;
+}
+
 .about p {
-  width: 90%;
+  text-align: justify;
+  width: 85%;
   margin: 10px auto;
+  font-family: 'helvetica';
+  font-weight: bold;
+  font-size: 18px;
+  color: #3c0061;
 }
 
 .articles {
@@ -27,10 +40,12 @@
   height: 230px;
   width: 1186px;
 }
+
 .articles p {
   font-family: 'helvetica';
   font-size: 15px;
 }
+
 .articles h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
