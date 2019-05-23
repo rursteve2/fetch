@@ -1,14 +1,14 @@
 import React from 'react';
-import Catstuff from './Catstuff'
-import Dogstuff from './Catstuff'
-import Bunnystuff from './Catstuff'
+// import Catstuff from './Catstuff'
+// import Dogstuff from './Catstuff'
+// import Bunnystuff from './Catstuff'
 import { Route, Switch } from 'react-router-dom'
 
 const Categories = (props) => {
     return (
     <div className='categories'>
-        <div>
-            <h2>Cats</h2>
+        
+            {/* <h2>Cats</h2>
             <Route path="/Catstuff" render={() => <Cats/>}/>
             <img src='' alt='cat'/>
         </div>
@@ -21,7 +21,7 @@ const Categories = (props) => {
             <h2>Bunnies</h2>
             <Route path="/Catstuff" render={() => <Bunnies/>}/>
             <img src='' alt='bunnies'/>
-        </div>
+        </div> */}
     </div>
     );
 };
