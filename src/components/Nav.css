@@ -37,10 +37,10 @@ nav {
 
 .nav-link:hover {
   color: white;
-  /* text-shadow: 2px 2px #FFAA2B; */
+  text-shadow: 2px 2px black;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   nav {
     overflow: hidden;
     position: relative;

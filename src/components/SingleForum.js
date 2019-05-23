@@ -25,7 +25,7 @@ class SingleForum extends Component {
 
 handleSubmit = async(e) => {
   e.preventDefault();
-  alert('comment(text) posted would have been.  ' + this.state.comment)
+  alert('You just commented:  ' + this.state.comment)
   window.location.reload('/');
 }
 
