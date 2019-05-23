@@ -43,9 +43,9 @@ handleSubmit = async(e) => {
     <div className="forums">
       <h1>{forum.title}</h1>
       <p>{forum.body}</p>
-      <article>{forum.brief}</article>
+      <div className='forum-brief'>{forum.brief}</div>
      {/* <icon>{this.state.count}</icon>  this would have been num of comments but the state is currently flawed as it does not keep count per post instance*/}
-      <button onClick={this.handleClick}>Comment</button>
+      <div><button onClick={this.handleClick}>Comment</button></div>
     </div>
   );
   else
