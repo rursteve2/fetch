@@ -37,8 +37,8 @@
   background-color: white;
   max-width: 80%;
   display: flex;
-  height: 230px;
-  width: 1186px;
+  height: 100%;
+  width: 95%;
 }
 
 .articles p {
@@ -73,16 +73,17 @@
   border: 3px #FFAA2B solid;
   margin: 10px auto 10px auto;
   background-color: rgba(255, 255, 255, 0.479);
-  max-width: 80%;
+  width: 80%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 230px;
-  width: 1186px;
+  height: 100%;
 }
 .forums p {
   font-family: 'helvetica';
   font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .forums h1 {
   font-family: 'Montserrat', sans-serif;
@@ -104,6 +105,8 @@
 }
 .forums button {
   max-width: 200px;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 .forum-brief {
   margin-top: auto;
@@ -122,12 +125,41 @@
   font-size: 20px;
   font-family: 'helvetica';
 }
+.one-article {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 3px solid #FFAA2B;
+  background-color: white;
+}
+.one-article p {
+  white-space: pre-line;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.one-article img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.one-article h1 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .bodyanimals {
     flex-direction: column;
   }
-
+  .bodyanimals img {
+    width: 80%;
+    height: auto;
+  }
   h1 {
     font-size: 15px;
   }
@@ -138,6 +170,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 95%;
     height: 100%;
   }
   .articles img{
@@ -150,13 +183,22 @@
     margin-right: 10px;
   }
   .articles h1 {
-    font-size: 17px;
+    font-size: 20px;
   }
   .articles p {
     font-size: 14px;
   }
-
-
-
-
+  .forums p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .forums div {
+    margin-bottom: 20px;
+  }
+  .one-article h1 {
+    font-size: 20px;
+  }
+  .one-article {
+    width: 95%;
+  }
 }

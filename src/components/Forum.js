@@ -21,7 +21,6 @@ class Forum extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.dataRender}>data tester (check yo console)</button>
                 { forums.map((forum, index) => <SingleForum forum={forum} />) }                
             </div>
         );
