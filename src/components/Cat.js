@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import SingleCat from './SingleCat';
+import ArticlePreview from './ArticlePreview';
 
-class Dog extends Component {
+class Cat extends Component {
   render() {
 
   return (
     <div>
       <h1>Cats!</h1>
-      { this.props.cats.map((cat, index) => <SingleCat cat={cat} />) }
+      { this.props.cats.map((cat, index) => <ArticlePreview article={cat} />) }
     </div>
   );
 }
 }
 
-export default Dog;
+export default Cat;

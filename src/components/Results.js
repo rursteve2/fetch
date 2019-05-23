@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ArticlePreview from './ArticlePreview'
 
 class Results extends Component {
   constructor(props) {
@@ -13,13 +14,7 @@ class Results extends Component {
   showArticles() {
     let articles = this.props.articles.map((article, index) => {
       return (
-        <div className="articles" key={index}>
-          <img src={article.img} alt={article.title} />
-          <div>
-            <h1>{article.title}</h1>
-            <p>{article.brief}</p>
-          </div>
-        </div>
+        <ArticlePreview article={article} key={index} />
       )
     })
     return articles

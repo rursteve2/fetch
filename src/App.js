@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import Search from './components/Search'
-import SingleDog from './components/SingleDog'
-import SingleCat from './components/SingleCat'
-import SingleBunny from './components/SingleBunny'
 import Body from './components/Body'
 import Footer from './components/Footer'
 import Results from './components/Results'
 import articles from './articles'
-import Categories from './components/Categories'
 import Articles from './components/Articles'
 import { Route, Switch, withRouter } from 'react-router-dom';
 import About from './components/About';
@@ -65,7 +61,7 @@ dataSplit = async() => {
   onSubmit = (e) => {
     e.preventDefault();
     let allArticles = articles.filter((article) =>
-      article.pet.includes(this.state.search) || article.pet+'s' === this.state.search
+      article.body.includes(this.state.search) || article.pet+'s' === this.state.search
     )
     this.setState({
       filteredArticles: allArticles,
@@ -102,23 +98,17 @@ dataSplit = async() => {
       }/>
         <Route path="/articles" render={() => <Articles selectArticle={this.selectArticle} />}/>
         <Route path="/search-results" render={() => <div>
-          <Search
-            search={this.state.search}
-            submitted={this.state.submitted}
-            onSubmit={this.onSubmit}
-            onChangeHandler={this.onChangeHandler} filteredArticles={this.state.filteredArticles}
-          />
           <Results
           articles={this.state.filteredArticles}
           resetSubmit={this.resetSubmit} selectArticle={this.selectArticle} />
           </div> }/>
-          <Route path="/Dog" render={() => <Dog
+          <Route path="/dog" render={() => <Dog
           dogs={this.state.dogs}
           />} />
-          <Route path="/Cat" render={() => <Cat
+          <Route path="/cat" render={() => <Cat
           cats={this.state.cats}
           />} />
-          <Route path="/Bunny" render={() => <Bunny
+          <Route path="/bunny" render={() => <Bunny
           bunnies={this.state.bunnies}
           />} />
         <Route path="/about" render={() => <About/>} />
