@@ -7,7 +7,7 @@ export default function SingleArticle(props) {
       <img src={article.img} alt={article.title}/>
       <div>
       <h1>{article.title}</h1>
-      <p>{article.brief}</p>
+      <p>{article.body}</p>
       </div>
     </div>
   )

@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom'
-import SingleDog from './SingleDog'
+import { Link } from 'react-router-dom'
 
 
 class Body extends Component {
   render() {
     return (
       <div className="bodyanimals">
-        <Link to="/Cat">
-          <img src={require("../assets/indexcat.svg")}/>
+        <Link to="/cat">
+          <img src={require("../assets/indexcat.svg")} alt="cats"/>
         </Link>
-        <Link to="/Dog">
-          <img src={require("../assets/indexdog.svg")}/>
+        <Link to="/dog">
+          <img src={require("../assets/indexdog.svg")} alt="dogs"/>
         </Link>
-        <Link to="/Bunny">
-          <img src={require("../assets/indexsmallanimals.svg")}/>
+        <Link to="/bunny">
+          <img src={require("../assets/indexsmallanimals.svg")} alt="small animals"/>
         </Link>
       </div>
     );
