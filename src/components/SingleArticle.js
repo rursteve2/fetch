@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SingleArticle extends Component {
-  render() {
-    const { article } = this.props;
+export default function SingleArticle(props) {
+  const { article } = props;
   return (
-    <div className="articles">
-      <img src={article.img}/>
+    <div className="one-article">
+      <img src={article.img} alt={article.title}/>
       <div>
       <h1>{article.title}</h1>
       <p>{article.body}</p>
       </div>
     </div>
-  );
+  )
 }
-}
-
-export default SingleArticle;
