@@ -16,7 +16,7 @@ class Results extends Component {
         <div className="articles" key={index}>
           <img src={article.img} alt={article.title} />
           <div>
-            <h2>{article.title}</h2>
+            <h1>{article.title}</h1>
             <p>{article.brief}</p>
           </div>
         </div>

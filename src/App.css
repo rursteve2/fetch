@@ -98,6 +98,30 @@
   h1 {
     font-size: 15px;
   }
+  .allarticles {
+    overflow: scroll;
+  }
+  .articles {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+  }
+  .articles img{
+    max-width: 100%;
+    height: auto;
+    margin: 3px 3px 0 3px;
+  }
+  .articles div {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .articles h1 {
+    font-size: 17px;
+  }
+  .articles p {
+    font-size: 14px;
+  }
 
 
 

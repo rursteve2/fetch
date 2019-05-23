@@ -36,3 +36,22 @@ nav {
   color: white;
   /* text-shadow: 2px 2px #FFAA2B; */
 }
+
+@media only screen and (max-width: 500px) {
+  nav {
+    overflow: hidden;
+    position: relative;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  }
+
+}
