@@ -9,6 +9,8 @@ import articles from './articles'
 import Categories from './components/Categories'
 import Articles from './components/Articles'
 import { Route, Switch } from 'react-router-dom';
+import About from './components/About';
+import Forum from './components/Forum';
 
 class App extends Component {
 constructor() {
@@ -83,18 +85,20 @@ dataSplit = async() => {
         <Route exact path="/" render={() =>
           <Body/>
       }/>
-      <Route path="/articles" render={() => <Articles/>}/>
-      <Route path="/search-results" render={() => <div>
-        <Search
-          search={this.state.search}
-          submitted={this.state.submitted}
-          onSubmit={this.onSubmit}
-          onChangeHandler={this.onChangeHandler} filteredArticles={this.state.filteredArticles}
-        />
-        <Results
-        articles={this.state.filteredArticles}
-        resetSubmit={this.resetSubmit} />
-        </div> }/>
+        <Route path="/articles" render={() => <Articles/>}/>
+        <Route path="/search-results" render={() => <div>
+          <Search
+            search={this.state.search}
+            submitted={this.state.submitted}
+            onSubmit={this.onSubmit}
+            onChangeHandler={this.onChangeHandler} filteredArticles={this.state.filteredArticles}
+          />
+          <Results
+          articles={this.state.filteredArticles}
+          resetSubmit={this.resetSubmit} />
+          </div> }/>
+        <Route path="/about" render={() => <About/>} />
+        <Route path="/forum" render={() => <Forum/>} />
       </Switch>
       <Footer/>
     </div>

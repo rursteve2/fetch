@@ -9,7 +9,7 @@ export default function NavBar() {
       <nav>
         <NavLink to="/" exact className="nav-link" activeClassName="active">Home</NavLink>
         <NavLink to="/articles" exact className="nav-link" activeClassName="active">Articles</NavLink>
-        <NavLink to="/forums" exact className="nav-link" activeClassName="active">Forum</NavLink>
+        <NavLink to="/forum" exact className="nav-link" activeClassName="active">Forum</NavLink>
         <NavLink to="/about" exact className="nav-link" activeClassName="active">About Us</NavLink>
       </nav>
     </header>
