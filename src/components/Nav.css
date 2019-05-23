@@ -17,8 +17,11 @@ nav {
 }
 
 .nav-link {
+  font-family: 'Montserrat';
+  font-weight: bold;
   display: block;
   width: auto;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   margin: 20px;
